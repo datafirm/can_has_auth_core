@@ -1,0 +1,5 @@
+<% form_tag :action => url(:password,:id=>@user.id), :method => :put do -%>
+		<p><%= password_field :name => 'user[password]', :class => 'title', :label => "Password" %></p>
+		<p><%= password_field :name => 'user[password_confirmation]', :class => 'title', :label => "Confirm Password" %></p>
+	<p><%= submit_button "Change Password" %></p>
+<% end -%>

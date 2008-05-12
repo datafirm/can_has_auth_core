@@ -1,0 +1,5 @@
+<% form_tag :action=> url(:user_activation) do %>
+<p><%= text_field :name => "activation_code", :value => params[:activation_code], :size=>50, :class => 'title',:label => "Activation Code" %>
+</p>
+<p><%= submit_button "Sign up" %></p>
+<% end -%>

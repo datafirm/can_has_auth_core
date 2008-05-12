@@ -1,0 +1,8 @@
+<% form_tag :action => url(:login) do -%>
+  <p><%= text_field :name => "email", :label => "Email" %></p>
+  <p><%= password_field :name => "password", :label => "Password" %></p>
+  <!-- Uncomment this if you want this functionality
+  <p><%= checkbox_field :name => 'remember_me', :label => "Remember Me" %></p>
+  -->
+  <p><%= submit_button 'Log in' %></p>
+<% end -%>
