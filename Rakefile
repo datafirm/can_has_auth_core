@@ -13,7 +13,7 @@ SUMMARY =<<-EOS
 Drop in user authentication for merb with datamapper
 EOS
  
-require "lib/can_has_auth/version"
+require "lib/can_has_auth_core/version"
  
 spec = Gem::Specification.new do |s|
   s.name = NAME
