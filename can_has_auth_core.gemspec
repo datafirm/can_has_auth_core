@@ -47,10 +47,6 @@ Gem::Specification.new do |s|
     spec/controllers/users_spec.rb
     spec/controllers/session_spec.rb
     spec/models/user_spec.rb
-    script/console
-    script/destroy
-    script/generate
-    script/txt2html
     setup.rb
   )
   s.test_files = %w(
