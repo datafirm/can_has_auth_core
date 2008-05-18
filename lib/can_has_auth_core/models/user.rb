@@ -7,7 +7,7 @@ class User
   
   attr_accessor :password, :password_confirmation
   
-  property :id,                         Fixnum, :serial => true
+  property :id,                         Integer, :serial => true
   property :email,                      String, :length => 3..100, :nullable => false, :unique => true
   property :crypted_password,           String
   property :salt,                       String
