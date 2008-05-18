@@ -10,6 +10,8 @@ if defined?(Merb::Plugins)
   require "merb-action-args"
 
   Merb::BootLoader.before_app_loads do
+    Application._template_roots.insert(0, [File.join(File.dirname(__FILE__), 'can_has_auth_core','views'), :_template_location])
+    Application._template_roots.insert(0, [File.join(File.dirname(__FILE__), 'can_has_auth_core','mailers','views'), :_template_location])
     if Merb.env == "development"
       Merb::Mailer.delivery_method = :test_send
     else

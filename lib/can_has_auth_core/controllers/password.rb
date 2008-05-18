@@ -42,20 +42,4 @@ class Password < Application
       redirect url(:edit_password)
     end
   end
-
-  private
-    alias :_orig_template_location :_template_location
-  
-    def _template_location(action, type = nil, controller = controller_name)
-      file = controller == "layout" ? "layout.#{type}" : "#{action}.#{type}"
-    
-      unless Dir["#{Merb.dir_for(:view)}/#{controller}/#{action}.#{type}.*"].empty?
-        _orig_template_location( action, type, controller )
-      else
-        undo   = Merb.load_paths[:view].first.gsub(%r{[^/]+}, '..')
-        prefix = File.dirname(__FILE__)
-        folder = 'views'
-        File.join( '.',undo, prefix,'..', folder, controller, file )
-      end
-    end
 end
